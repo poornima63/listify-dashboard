@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { toast } from "react-toastify";
-import { baseUrls } from "../baseUrls";
+// import { baseUrls } from "../baseUrls";
+import { baseUrls} from "../baseUrls"
 
 
 function Contact() {

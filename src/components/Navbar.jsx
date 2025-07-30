@@ -139,12 +139,13 @@ function Navbar() {
             <li>
               {localStorage.getItem("auth-token") ? (
                <img
-                  className="w-12 h-12 cursor-pointer rounded-full"
+                  className="w-12 h-12 cursor-pointer border-4 text-amber-50 rounded-full"
                   src={user?.avatar || "/default-avatar.png"}
                   alt=""
                   onClick={() => {
                     setOpen(true);
                   }}
+                
                 />
       ) : (
         <Link
