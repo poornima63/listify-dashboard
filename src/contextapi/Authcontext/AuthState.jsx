@@ -4,6 +4,7 @@ import { baseUrls } from "../../baseUrls"
 
 // import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+// import { base } from "../../../backend/Schema/auth.model";
 function AuthState({ children }) {
 
   const [user, setUser] = useState({});
@@ -73,6 +74,7 @@ setIsLogin(true)
 
   const getUserFun = async () =>{
     
+    
       try{
 const user = await fetch(`${baseUrls}/api/v2.3/auth/getuser`,{
  method:"GET",
@@ -107,7 +109,9 @@ if(data.success) {
 
     const data = await response.json();
     if (data.success) {
+
       toast.success("Profile picture updated");
+      setUser(prev => ({ ...prev, avatar: data.avatar })); 
     } else {
       toast.error(data.message);
     }
