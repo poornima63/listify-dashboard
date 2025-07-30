@@ -17,6 +17,9 @@ const onchangeHandler = (e)=>{
 }
 const onSubmitHandler = async (e)=>{
   try {
+    
+    const token = localStorage.getItem("token");
+
     const res = await fetch(`${baseUrls}/api/contact/send`,{
        method:"POST",
         headers:{
@@ -184,9 +187,7 @@ const onSubmitHandler = async (e)=>{
                 />
               </div>
               <button
-              onClick={()=>{
-                toast.success("Mesaage sent successfully")
-              }}
+             
                 type="submit"
                 className="md:w-32 bg-orange-600 hover:bg-blue-dark text-white font-bold py-3 px-6 rounded-lg mt-5 hover:bg-orange-600 transition ease-in-out duration-300"
               >
