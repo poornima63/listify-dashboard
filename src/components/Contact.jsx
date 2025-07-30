@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { toast } from "react-toastify";
+import { baseUrls } from "../baseUrls";
+
 
 function Contact() {
 
@@ -15,7 +17,7 @@ const onchangeHandler = (e)=>{
 }
 const onSubmitHandler = async (e)=>{
   try {
-    const res = await fetch('http://localhost:7000/api/contact/send',{
+    const res = await fetch(`${baseUrls}/api/contact/send`,{
        method:"POST",
         headers:{
             "Content-Type":"application/json"
