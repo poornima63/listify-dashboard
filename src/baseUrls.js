@@ -1,2 +1,2 @@
 // ✅ baseUrls.js
-export const baseUrls = "http://localhost:7000";
+export const baseUrls = "https://listify-dashboard.onrender.com";
