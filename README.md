@@ -1,16 +1,80 @@
-<<<<<<< HEAD
-# React + Vite
+🌍 Plan2Wander
+Plan2Wander is a full-stack MERN travel app where users can create, edit, and manage travel posts, upload images, and connect with others. The app supports secure login, user profiles, and contact form integration.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 Tech Stack
+Frontend: React (Vite), Tailwind CSS
 
-Currently, two official plugins are available:
+Backend: Node.js, Express.js
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Database: MongoDB
 
-## Expanding the ESLint configuration
+Authentication: JWT
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# listify-dashboard
->>>>>>> 22d12755736c9955ced4428c73d571e05b13fe60
+Image Upload: Cloudinary + Multer
+
+Hosting:
+
+Frontend: Netlify
+
+Backend: Render
+
+🔐 Features
+✅ User Authentication (Signup/Login)
+
+📸 Upload & Update Profile Picture
+
+📝 Create, Edit, Delete Travel Posts
+
+❤️ Like & Comment System
+
+🌐 Contact Form to Reach Admin
+
+🌙 Light/Dark Theme Toggle
+
+📤 Cloudinary Image Handling
+
+🌍 Country & Address Management in Profile
+
+🔗 Live Links
+Frontend (Netlify): https://plan2wander.netlify.app
+
+Backend (Render): https://listify-dashboard.onrender.com
+
+📁 Folder Structure
+
+src/
+├── components/
+├── pages/
+├── contextapi/
+├── utils/
+├── App.jsx
+└── main.jsx
+
+backend/
+├── controllers/
+├── middleware/
+├── models/
+├── routes/
+├── uploads/
+└── index.js
+🔑 Environment Variables
+Backend .env
+
+
+MONGODB_URL=your_mongodb_url
+JWT_SECRET=your_jwt_secret
+CLOUDINARY_CLOUD_NAME=your_cloud_name
+CLOUDINARY_API_KEY=your_api_key
+CLOUDINARY_API_SECRET=your_api_secret
+
+
+
+💡 Future Improvements
+✅ Pagination for posts
+
+🔍 Search & Filter posts
+
+📨 Email confirmation after contact
+
+🧭 Add Google Maps integration
+
