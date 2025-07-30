@@ -42,7 +42,7 @@ setIsLogin(true)
   const loginFun = async (user, navigate, setLogin) => {
   
       try {
-        const res = await fetch("http://localhost:7000/api/v2.3/auth/login", {
+        const res = await fetch(`${baseUrls}/api/v2.3/auth/login`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -74,7 +74,7 @@ setIsLogin(true)
   const getUserFun = async () =>{
     
       try{
-const user = await fetch('http://localhost:7000/api/v2.3/auth/getuser',{
+const user = await fetch(`${baseUrls}/api/v2.3/auth/getuser`,{
  method:"GET",
   headers: {
     "Content-Type": "application/json",
@@ -97,7 +97,7 @@ if(data.success) {
   formData.append("avatar", file);
     try {
       
-      const response = await fetch('http://localhost:7000/api/v2.3/auth/update-profile-pic', {
+      const response = await fetch(`${baseUrls}/api/v2.3/auth/update-profile-pic`, {
       method: "PUT",
       headers: {
         "auth-token": localStorage.getItem("token"),
