@@ -140,7 +140,7 @@ function Navbar() {
               {localStorage.getItem("auth-token") ? (
                <img
                   className="w-12 h-12 cursor-pointer rounded-full"
-                  src={user?.avatar}
+                  src={user?.avatar || "/default-avatar.png"}
                   alt=""
                   onClick={() => {
                     setOpen(true);
