@@ -16,6 +16,7 @@ const onchangeHandler = (e)=>{
   setData({...data,[e.target.name]:e.target.value})
 }
 const onSubmitHandler = async (e)=>{
+   e.preventDefault(); // 
   try {
     
     const token = localStorage.getItem("token");
