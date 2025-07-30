@@ -19,18 +19,19 @@ const onSubmitHandler = async (e)=>{
    e.preventDefault(); // 
   try {
     
-    const token = localStorage.getItem("token");
+    // const token = localStorage.getItem("token");
 
     const res = await fetch(`${baseUrls}/api/contact/send`,{
        method:"POST",
         headers:{
-            "Content-Type":"application/json"
+            "Content-Type":"application/json",
+             "auth-token": localStorage.getItem("token"),
 
         },
         body:JSON.stringify(data)
     })
      const mess = await res.json();
-       console.log(mess)
+      //  console.log(mess)
      if (mess.success) {
       toast.success(mess.message);
       // Clear form
