@@ -139,7 +139,7 @@ console.log("auth-token", localStorage.getItem("auth-token"));
               <i className="fa-solid fa-bell"></i>
             </li>
             <li>
-              {localStorage.getItem("auth-token") ? (
+              {localStorage.getItem("token") ? (
                <img
                   className="w-12 h-12 cursor-pointer rounded-full"
                   src={user.avatar || "/default-avatar.png"}
