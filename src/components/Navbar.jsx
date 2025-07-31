@@ -142,7 +142,7 @@ console.log("auth-token", localStorage.getItem("auth-token"));
               {localStorage.getItem("auth-token") ? (
                <img
                   className="w-12 h-12 cursor-pointer rounded-full"
-                  src={user?.avatar || "/default-avatar.png"}
+                  src={user.avatar || "/default-avatar.png"}
                   alt=""
                   onClick={() => {
                     setOpen(true);
