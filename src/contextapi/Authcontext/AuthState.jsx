@@ -57,6 +57,7 @@ setIsLogin(true)
             email: "",
             password: "",
           });
+              localStorage.setItem("user", JSON.stringify(data.user));
           localStorage.setItem("token", data.token);
           setIsLogin(true);
           setUser(data.user)
