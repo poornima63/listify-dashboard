@@ -22,11 +22,7 @@ connectToMongoDB();
 console.log(cloudinary.config())
 // Middleware
 
-// app.use(cors());
-app.use(cors({
-  origin: ["http://localhost:5173", "https://plan2wander.netlify.app"],
-  credentials: true
-}))
+app.use(cors());
 app.use(express.json());
 app.use(express.static('public'))
 
