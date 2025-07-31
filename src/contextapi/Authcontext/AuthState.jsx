@@ -108,11 +108,14 @@ if(data.success) {
     });
 
     const data = await response.json();
-    if (data.success) {
+   if (data.success) {
+  toast.success("Profile picture updated");
 
-      toast.success("Profile picture updated");
-      setUser(prev => ({ ...prev, avatar: data.avatar })); 
-    } else {
+  const updatedUser = { ...user, avatar: data.avatar };
+  setUser(updatedUser);  // context update
+  localStorage.setItem("user", JSON.stringify(updatedUser));  // persist
+}
+ else {
       toast.error(data.message);
     }
 
